@@ -13,6 +13,11 @@ spec:
       labels:
         app: linkding
     spec:
+      securityContent:
+        runAsUser: 33  # www-data id user
+        runAsGroup: 33 # www-data id user
+        fsGroup: 33    # www-data id user
+
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.47.0
@@ -27,7 +32,4 @@ spec:
         - name: linkding-data
           persistentVolumeClaim:
             claimName: linkding-data-pvc
-      securityContent:
-        runAsUser: 33  # www-data id user
-        runAsGroup: 33 # www-data id user
-        fsGroup: 33    # www-data id user
+
