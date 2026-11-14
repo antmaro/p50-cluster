@@ -21,7 +21,7 @@ spec:
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
-          securityContent:
+          securityContext:
             allowPrivilegeEscalation: false
       volumes:
         - name: linkding-data
