@@ -27,7 +27,7 @@ spec:
         - name: linkding-data
           persistentVolumeClaim:
             claimName: linkding-data-pvc
-     securityContent:
-       runAsUser: 33  # www-data id user
-       runAsGroup: 33 # www-data id user
-       fsGroup: 33    # www-data id user
+      securityContent:
+        runAsUser: 33  # www-data id user
+        runAsGroup: 33 # www-data id user
+        fsGroup: 33    # www-data id user
